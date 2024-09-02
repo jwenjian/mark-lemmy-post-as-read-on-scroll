@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "Mark lemmy post as read on scroll",
+  "version": "1.0",
+  "description": "Mark lemmy post as read on scroll, made by the owner of https://1link.fun",
+  "permissions": [
+    "activeTab",
+    "scripting"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ]
+}
